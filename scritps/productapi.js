@@ -1,4 +1,4 @@
-const DATA = '../src/data.json';
+const DATA = './src/data.json';
 export const fetchProducts = async () => {
     try {
         const response = await fetch(DATA);
