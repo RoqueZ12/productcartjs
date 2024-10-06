@@ -48,7 +48,7 @@ export const openCheckoutModal = (cartProducts) => {
         checkoutModal.style.display = 'none';
         
         // Limpiar el carrito después de confirmar
-        import('./helpfunctions.js').then(module => {
+        import('../scritps/helpfunctions.js').then(module => {
           module.clearCart(); // Limpia el carrito
 
           // Restablecer los botones "Add to Cart"

@@ -1,4 +1,4 @@
-import { renderCart } from "./cart.js";
+import { renderCart } from "../scritps/cart.js";
 let cartProducts = [];
 // Función para agregar un producto al carrito
 export const addToCart = (product) => {

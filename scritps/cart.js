@@ -1,4 +1,4 @@
-import { getCartProducts, removeFromCart } from './helpfunctions.js';
+import { getCartProducts, removeFromCart } from '../scritps/helpfunctions.js';
 export const renderCart = () => {
     const cart = document.getElementById('carrito');
     const cartProducts = getCartProducts(); // Obtener los productos del carrito
@@ -65,7 +65,7 @@ export const renderCart = () => {
         // Añadir evento al botón de checkout
         const checkoutButton = document.querySelector('.cart-button');
         checkoutButton.addEventListener('click', () => {
-            import('./modal.js').then(module => module.openCheckoutModal(cartProducts));
+            import('../scritps/modal.js').then(module => module.openCheckoutModal(cartProducts));
         });
 
         // Asignar el evento para eliminar el producto del carrito
