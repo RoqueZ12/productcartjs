@@ -27,7 +27,7 @@ export const renderProducts = (products, addToCart, decrementQuantity, removeFro
 								<button class="increment" data-name="${product.name}">+</button>
 							</div>
 							<button id="add-to-cart-${product.name}" class="add-to-cart"> 
-									<img src="../assets/images/icon-add-to-cart.svg" alt="Añadir al carrito" />
+									<img src="./assets/images/icon-add-to-cart.svg" alt="Añadir al carrito" />
 									<p>Add to cart</p>
 							</button>
 					</div>

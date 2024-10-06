@@ -36,7 +36,7 @@ export const renderCart = () => {
                             <p>$${(product.price * product.quantity).toFixed(2)}</p>
                         </div>
                         <button class="circle-remove" data-index="${index}">
-                            <img src="../assets/images/icon-remove-item.svg" alt="Borrar" />
+                            <img src="./assets/images/icon-remove-item.svg" alt="Borrar" />
                         </button>
                     </div>
                      <hr  style="margin: 10px 0"/>
