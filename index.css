@@ -1,0 +1,53 @@
+/* Reset básico */
+/* importar colores */
+@import "./styles/color/color.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Text', sans-serif; /* Aplicar la fuente al cuerpo */
+  line-height: 1.6;
+  background-color: var(--Rose-50);
+  padding: 1rem;
+  user-select: none;
+  font-size: 16px;
+}
+
+/* Estilos para el header */
+.header {
+  color: black;
+  text-align: start;
+  padding: 20px;
+}
+
+/* Estilos para el main */
+.contenedor-app {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 10px;
+
+}
+
+/* Estilos para la cuadrícula de productos */
+.contenedor-grip {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 3fr));
+  gap: 20px;
+}
+
+/* Estilos para el footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+

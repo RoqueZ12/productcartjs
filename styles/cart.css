@@ -1,0 +1,121 @@
+@import'../styles/cart.css';
+/*Estilos para tanto carrito vacio como carrito no vacio*/
+.cart-list, .cart-empty{
+  width: 50%;
+  margin: 20px auto;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+}
+/*Estilos para carrito vacio*/
+.cart-empty-info {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Alinea horizontalmente */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  text-align: center; /* Centra el texto dentro de los elementos */
+}
+
+.cart-empty-img {
+  display: flex; /* Añadir display: flex para centrar la imagen y el texto */
+  flex-direction: column; /* Apila la imagen y el texto verticalmente */
+  align-items: center; /* Alinea la imagen y el texto en el centro */
+}
+
+.cart-empty-img img {
+  max-width: 100%; /* Asegúrate de que la imagen no sobresalga */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+.cart-empty-info p {
+  color: rebeccapurple;
+}
+
+/*Estilos para carrito no vacio*/
+.cart-list-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.cart-list-info strong{
+  color: var(--Red);
+  margin-bottom: 10px;
+}
+.cart-product-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-product-details p:nth-of-type(1) {
+  color: var(--Red); /* Color para el primer párrafo (cantidad) */
+}
+
+.cart-product-details p:nth-of-type(2) {
+  color: var(--Rose-300); /* Color para el segundo párrafo (precio) */
+}
+
+.cart-product-details p:nth-of-type(3) {
+  color: var(--Rose-500); /* Color para el tercer párrafo (total) */
+}
+
+.cart-product-details{
+  display: flex;
+  gap: 20px;
+  padding: 0.7px 0;
+}
+.cart-list-total{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  padding: 10px 0; 
+}
+
+.cart-list-total p:nth-last-of-type(2){
+  font-size: 12px;
+  color: gray;
+}
+.cart-list-delivery{
+  background-color: var(--Rose-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+.cart-list-delivery p{
+  font-size: 12px;
+}
+.circle-remove{
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+/*Estilos para Confirmacion*/
+.cart-list-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+.cart-button{
+  width: 100%;
+  background-color: red;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+.cart-button:hover{
+  background-color: rgb(206, 63, 63);
+}
+hr {
+  border: none; /* Elimina el borde predeterminado */
+  height: 1px; /* Ajusta la altura del hr */
+  background-color: var(--Rose-300); /* Cambia el color de fondo */
+}

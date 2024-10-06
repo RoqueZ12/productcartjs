@@ -1,0 +1,97 @@
+/* Estilos para las tarjetas de productos */
+.card {
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  border: 2px solid var(--Rose-500);
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card-top {
+  position: relative;
+}
+.card-img {
+  width: 100%;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.add-to-cart {
+  position: absolute;
+  bottom: -10px; /* Ajusta la distancia desde la parte inferior si es necesario */
+  left: 50%;
+  transform: translateX(-50%); /* Centrar horizontalmente */
+  border: 1px solid var(--Rose-500);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: border 0.3s, color 0.3s;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.add-to-cart:hover {
+  border: 1px solid orange;
+  color: orange;
+}
+
+.quantity-controls {
+  position: absolute;
+  bottom: -10px; /* Ajusta la distancia desde la parte inferior si es necesario */
+  left: 50%;
+  transform: translateX(-50%); /* Centrar horizontalmente */
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 20px;
+  display: none; /* Mantener oculto hasta que se necesite */
+  background-color: var(--Red);
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quantity-controls span {
+  color: white;
+}
+
+.decrement,
+.increment {
+  width: 30px; /* Aumentar el tamaño para mejor usabilidad */
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--Red);
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.decrement:hover,
+.increment:hover {
+  background-color: white;
+  color: var(--Red);
+}
+
+.card-bottom {
+  padding: 15px;
+}
+.card-bottom span{
+  color: var(--Rose-500);
+}
+
+.card-bottom p:nth-of-type(1) {
+  font-weight: bold;
+}
+
+.card-bottom p:nth-of-type(2) {
+  color: var(--Red);
+  font-weight: 600;
+}

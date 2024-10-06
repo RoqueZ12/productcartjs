@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/cart.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/modal.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/product.css" />
+
+    <title>ProductList</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Desserts</h1>
+    </header>
+    <main id="app" class="contenedor-app">
+      <div class="contenedor-grip" id="grip">
+        <!-- Aquí se cargarán las tarjetas de productos -->
+      </div>
+      <div class="contenedor-carrito" id="carrito">
+        <!-- Aquí se cargarán los elementos del carrito -->
+      </div>
+      <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+          <img
+            src="./assets/images/icon-order-confirmed.svg"
+            alt="Resumen del pedido"
+          />
+          <h2>Order Confirmed</h2>
+          <span>We hope you enjoy your meal</span>
+          <div id="cartSummary"></div>
+          <button id="confirmOrder">Confirmar Pedido</button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>Challenge by RoqueZ12-2024</p>
+    </footer>
+    <script src="./scritps/index.js" type="module"></script>
+  </body>
+</html>
