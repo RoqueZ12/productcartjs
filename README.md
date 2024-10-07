@@ -38,10 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://your-solution-url.com)
-- Live Site URL:(https://your-live-site-url.com)
-
-## My process
+- Solution URL: https://github.com/RoqueZ12/productcartjs
+- Live Site URL:https://roquez12.github.io/productcartjs/
 
 ### Built with
 
