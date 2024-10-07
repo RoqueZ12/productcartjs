@@ -12,7 +12,7 @@ export const renderCart = () => {
             <div class="cart-empty-info">
                 <p>Your Cart (0)</p>
                 <div class="cart-empty-img">
-                    <img src="../assets/images/illustration-empty-cart.svg" alt="No hay Productos" />
+                    <img src="./assets/images/illustration-empty-cart.svg" alt="No hay Productos" />
                     <p>Your added items will appear here</p>
                 </div>
             </div>
@@ -52,7 +52,7 @@ export const renderCart = () => {
                     <p>$${cartProducts.reduce((total, product) => total + (product.price * product.quantity), 0).toFixed(2)}</p>
                 </div>
                 <div class="cart-list-delivery">
-                    <img src="../assets/images/icon-carbon-neutral.svg" alt="Carrito" />
+                    <img src="./assets/images/icon-carbon-neutral.svg" alt="Carrito" />
                     <p>This is a <strong>carbon-neutral delivery</strong></p>
                 </div>
                 <div class="cart-list-button">
