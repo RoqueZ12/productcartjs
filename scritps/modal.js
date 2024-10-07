@@ -8,39 +8,37 @@ export const openCheckoutModal = (cartProducts) => {
 
     // Agregar los productos del carrito al resumen
     cartProducts.forEach(product => {
-        const cardModal = document.createElement('div');
-        cardModal.className = 'cartSumaryCard';
-        cardModal.innerHTML += `
+        cartSummary.innerHTML += `
           <div class="cartSumaryCardInfo">
             <img src="${product.image.thumbnail}" alt="${product.name}"/>
             <div class="cartSumaryCardText">
-              <stong>${product.name}</stong>
+              <strong>${product.name}</strong>
               <div class="cartSumaryCardPrice">
                 <p>${product.quantity}x</p>
-                <p>$${product.price}</p>
-                <p>$${(product.price * product.quantity).toFixed(2)}</p></div>
+                <p>@ $${product.price.toFixed(2)}</p>
               </div>
-          </div>           
+            </div>
+             <strong>$${(product.price * product.quantity).toFixed(2)}</strong>
+          </div>  
+          <hr>         
         `;
-
-        cartSummary.appendChild(cardModal);
     });
 
     // Añadir total al resumen
     const total = cartProducts.reduce((total, product) => total + (product.price * product.quantity), 0).toFixed(2);
-    cartSummary.innerHTML += `<strong>Total: $${total}</strong>`;
-
+    cartSummary.innerHTML += `
+      <div class="cartSumaryCardTotal">
+        <p>Order total</p>
+        <strong>$${total}</strong>
+      </div>`;
     // Mostrar el modal
     checkoutModal.style.display = 'block';
-
-
     // Cerrar el modal cuando se hace clic fuera del modal
     window.onclick = (event) => {
         if (event.target === checkoutModal) {
             checkoutModal.style.display = 'none';
         }
     };
-
     // Confirmar el pedido
     confirmOrderButton.addEventListener('click', () => {
         alert('Pedido confirmado');
@@ -59,3 +57,4 @@ export const openCheckoutModal = (cartProducts) => {
     });
     
 };
+

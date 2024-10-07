@@ -6,35 +6,85 @@
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1000; /* Asegura que el modal esté encima de otros elementos */
   background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-  
 }
+
 .modal-content {
   background-color: #fefefe;
   margin: 50px auto; /* 15% desde arriba y centrado */
   padding: 20px;
   border: 1px solid #888;
-  width: 30%; /* Ancho del modal (ajustable) */
+
   border-radius: 10px;
+  max-width: 400px; /* Máximo ancho para pantallas grandes */
 }
-.cartSumaryCard{
+
+#cartSummary {
   border-radius: 10px;
   padding: 10px;
   background-color: var(--Rose-100);
 }
-.cartSumaryCardInfo{
+
+hr {
+  margin: 15px 0;
+}
+
+.cartSumaryCardInfo {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 1fr 2fr 1fr; /* 3 columnas con diferentes proporciones */
   gap: 10px;
   align-items: center;
 }
-.cartSumaryCardText{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 90%;
+
+.cartSumaryCardInfo img {
+  height: 80px;
+  border-radius: 10px;
 }
-.cartSumaryCardPrice{
+
+.cartSumaryCardTotal {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+}
+
+.cartSumaryCardTotal strong {
+  font-size: 25px;
+}
+
+.cartSumaryCardPrice {
+  display: flex;
+  gap: 20px;
+}
+
+.cartSumaryCardPrice p:nth-of-type(1) {
+  color: var(--Red);
+}
+
+.cartSumaryCardPrice p:nth-of-type(2) {
+  color: var(--Rose-300);
+}
+
+#confirmOrder {
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--Red);
+  color: white;
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 500px) {
+  .modal-content {
+    width: 100%; /* Ajustar el ancho del modal en pantallas pequeñas */
+    margin: 20px 0; /* Agregar margen */
+  }
+  .cartSumaryCardTotal strong {
+    font-size: 20px; /* Ajustar tamaño de fuente en pantallas pequeñas */
+  }
+  .cartSumaryCardInfo img {
+    height: 60px; /* Ajustar el tamaño de la imagen */
+  }
 }

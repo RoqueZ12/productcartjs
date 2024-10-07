@@ -119,3 +119,13 @@ hr {
   height: 1px; /* Ajusta la altura del hr */
   background-color: var(--Rose-300); /* Cambia el color de fondo */
 }
+@media screen and (max-width: 500px) {
+  .cart-empty, .cart-list{
+    width: 100%;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 1024px) {
+  .cart-empty, .cart-list {
+    width: 80%;
+  }
+}

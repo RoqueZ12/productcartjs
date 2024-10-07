@@ -29,7 +29,7 @@ export const decrementQuantity = (product) => {
 // Función para eliminar un producto del carrito
 export const removeFromCart = (product) => {
   cartProducts = cartProducts.filter(item => item.name !== product.name || item.price !== product.price);
-   retomarButton(product);
+  retomarButton(product);
   renderCart(); // Actualizar la vista del carrito
 };
 //Funcion para retomar button en el carrito
@@ -46,6 +46,19 @@ export const retomarButton = (product) => {
 export const clearCart = () => {
   cartProducts = []; // Vaciar el carrito
   renderCart(); // Actualizar la vista del carrito
+};
+//Funcion para cambiar imagen segun pantalla
+export const changeImage = (product) => {  
+  const image = document.getElementById(`dessert-img-${product.name}`);
+  if (image) {
+      if (window.innerWidth <= 500) {
+          image.src = product.image.mobile; // Cambia a la imagen móvil
+      } else if (window.innerWidth <= 1024) {
+          image.src = product.image.tablet; // Cambia a la imagen tablet
+      } else {
+          image.src = product.image.desktop; // Cambia a la imagen de escritorio
+      }
+  }
 };
 
 export const getCartProducts = () => cartProducts;

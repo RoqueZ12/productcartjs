@@ -30,7 +30,6 @@ body {
   display: grid;
   grid-template-columns: 2fr 2fr;
   gap: 10px;
-
 }
 
 /* Estilos para la cuadrícula de productos */
@@ -51,3 +50,11 @@ body {
   width: 100%;
 }
 
+@media screen and (max-width: 500px) {
+  .contenedor-app {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  
+}
